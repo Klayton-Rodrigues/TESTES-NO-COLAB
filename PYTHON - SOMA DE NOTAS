@@ -1,0 +1,19 @@
+soma = 0
+alunos = int(input("Digite a quantidade de alunos na sala: "))
+
+for aluno in range(alunos):
+  nome = input("Nome do(a) aluno(a) = ")
+  prova = float(input("Prova: "))
+  atividades = float(input("Atividades: "))
+  nota = prova*0.6 + atividades*0.4
+  print("Nota: ", nota)
+#Essa variável SOMA está guardando as notas dos alunos a cada loop.
+#Sempre que um finaliza, ela soma a nota que foi gerada com a soma das 
+#notas anteriores.
+  soma = soma + nota
+  if nota >=5:
+    print(nome, "foi aprovado(a)")
+  else:
+    print(nome, "foi Reprovado(a)")
+media = soma / alunos
+print("Media geral dos alunos: ", media)
